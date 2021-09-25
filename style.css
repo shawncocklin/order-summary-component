@@ -1,0 +1,137 @@
+/* centering component for demoing on its own */
+body{
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: hsl(225, 100%, 94%)
+}
+
+/*==================
+  GLOBAL STYLES
+===================*/
+
+a {
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*==================
+  TYPOGRAPHY
+===================*/
+
+.summary-card {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1rem;
+  color: hsl(223, 47%, 23%);
+  text-align: center;
+}
+
+.plan-name-text {
+  font-weight: 900;
+}
+
+.plan-cost-text {
+  opacity: .8;
+}
+
+.summary-body {
+  line-height: 1.8;
+}
+
+/*==================
+  BUTTONS
+===================*/
+
+.btn {
+  padding: 1em 4em;
+  background: hsl(245, 75%, 52%);
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.payment-btn {
+  margin-bottom: 1em;
+  color: #fff;
+  box-shadow: 0px 15px 20px hsla(224, 23%, 55%, .5);
+  transform: scale(1);
+  transition: transform 300ms;
+}
+
+.payment-btn:hover,
+.payment-btn:focus {
+  transform: scale(1.125);
+  transition: transform 300ms;
+}
+
+.cancel-btn {
+  background: 0;
+  color: hsl(223, 47%, 23%);
+  opacity: .8;
+  margin-bottom: 1.5em;
+  transition: opacity 300ms, border 300ms;
+}
+
+.cancel-btn-border {
+  border: 2px solid hsla(223, 47%, 23%, 0);
+}
+
+.cancel-btn:hover,
+.cancel-btn:focus {
+  border: 2px solid hsla(223, 47%, 23%, 1);
+  opacity: 1;
+  transition: opacity 300ms, border 300ms;
+  
+}
+
+/*==================
+  LAYOUT
+===================*/
+
+.summary-card {
+  box-sizing: border-box;
+  background: #fff;
+  max-width: 400px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.summary-details {
+  padding: 1em 2em;
+}
+
+.plan-details {
+  display: grid;
+  grid-template-columns: 2em 1fr 2fr 1fr 2em;
+  gap: .5em;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.icon {
+  grid-column: 2;
+}
+
+.plan-details-body {
+  grid-column: 3;
+  justify-self: start;
+}
+
+.plan-details-body > * {
+  margin: 0;
+}
+
+.change-plan-link {
+  grid-column: 4;
+  justify-self: baseline;
+}
+
